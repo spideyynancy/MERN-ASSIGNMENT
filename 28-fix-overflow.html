@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fix Overflow Problems</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            background: #f1efff;
+            color: #292943;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        header {
+            background: #6c5ce7;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px #00000010;
+        }
+
+        h2 {
+            color: #6c5ce7;
+        }
+
+        /* Fix 1: Prevent long words overflowing */
+        .long-text {
+            overflow-wrap: anywhere;
+            background: #e8e4ff;
+            padding: 15px;
+            border-radius: 6px;
+        }
+
+        /* Fix 2: Control horizontal overflow */
+        .scroll-box {
+            max-width: 100%;
+            overflow-x: auto;
+            background: #dffaf3;
+            padding: 15px;
+            border: 2px solid #00b894;
+        }
+
+        .wide-content {
+            min-width: 600px;
+            padding: 15px;
+            background: #b8f2e6;
+        }
+
+        /* Fix 3: Responsive images */
+        .image-box img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        /* Fix 4: Responsive layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .item {
+            background: #e8e4ff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Fix 5: Prevent flex items overflowing */
+        .flex-box {
+            display: flex;
+            gap: 12px;
+        }
+
+        .flex-item {
+            flex: 1;
+            min-width: 0;
+            padding: 15px;
+            background: #dffaf3;
+            overflow-wrap: anywhere;
+        }
+
+        pre {
+            max-width: 100%;
+            overflow-x: auto;
+            padding: 15px;
+            background: #292943;
+            color: white;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            color: #74748a;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .flex-box {
+                flex-direction: column;
+            }
+
+            header {
+                padding: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Fixing CSS Overflow</h1>
+            <p>Create a clean and responsive webpage</p>
+        </header>
+
+        <section class="card">
+            <h2>1. Long Text Overflow</h2>
+            <p class="long-text">
+                ThisIsAVeryLongWordThatCouldBreakTheLayout
+                WithoutProperOverflowHandling
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>2. Horizontal Overflow</h2>
+            <p>Scroll horizontally to view the wide content.</p>
+            <div class="scroll-box">
+                <div class="wide-content">
+                    This content is wider than its container.
+                </div>
+            </div>
+        </section>
+
+        <section class="card image-box">
+            <h2>3. Responsive Images</h2>
+            <p>Images should fit within their containers.</p>
+            <img
+                src="https://placehold.co/800x250/6c5ce7/ffffff?text=Responsive+Image"
+                alt="Example responsive image">
+        </section>
+
+        <section class="card">
+            <h2>4. Responsive Grid</h2>
+            <div class="grid">
+                <div class="item">Box One</div>
+                <div class="item">Box Two</div>
+                <div class="item">Box Three</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>5. Flexbox Overflow</h2>
+            <div class="flex-box">
+                <div class="flex-item">Flexible Item One</div>
+                <div class="flex-item">
+                    A long text that can wrap inside this box.
+                </div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>6. Important CSS Fixes</h2>
+            <pre><code>* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.long-text {
+    overflow-wrap: anywhere;
+}
+
+.flex-item {
+    min-width: 0;
+}</code></pre>
+        </section>
+
+        <footer>
+            <p>CSS Overflow Project | HTML &amp; CSS</p>
+        </footer>
+
+    </div>
+</body>
+</html>
+
