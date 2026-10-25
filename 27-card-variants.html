@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Variants</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1efff;
+            margin: 0;
+            padding: 30px 20px;
+            color: #292943;
+        }
+
+        h1 {
+            text-align: center;
+            color: #6c5ce7;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 35px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px #00000015;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .heading {
+            padding: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .card-one {
+            border: 1px solid #ddd;
+        }
+
+        .card-one .heading {
+            background: #e8e4ff;
+            color: #4834d4;
+        }
+
+        .card-two {
+            border-radius: 20px;
+            border-top: 5px solid #00b894;
+        }
+
+        .card-two .heading {
+            background: #dffaf3;
+            color: #008b70;
+        }
+
+        .card-three {
+            background: #292943;
+            color: white;
+        }
+
+        .card-three .heading {
+            background: #4834d4;
+        }
+
+        .card-three p {
+            color: #ddd;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 6px;
+            text-decoration: none;
+            background: #6c5ce7;
+            color: white;
+        }
+
+        .card-two .btn {
+            background: #00b894;
+        }
+
+        .card-three .btn {
+            background: white;
+            color: #292943;
+        }
+
+        footer {
+            text-align: center;
+            color: #777;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 750px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Creative Card Designs</h1>
+
+    <main class="container">
+
+        <article class="card card-one">
+            <div class="heading">Simple Card</div>
+            <div class="content">
+                <h2>Minimal Design</h2>
+                <p>A clean card with a simple border,
+                soft background and subtle shadow.</p>
+                <a href="#simple" class="btn">Learn More</a>
+            </div>
+        </article>
+
+        <article class="card card-two">
+            <div class="heading">Fresh Card</div>
+            <div class="content">
+                <h2>Modern Design</h2>
+                <p>A colourful card with rounded corners
+                and a green accent border.</p>
+                <a href="#fresh" class="btn">Explore</a>
+            </div>
+        </article>
+
+        <article class="card card-three">
+            <div class="heading">Dark Card</div>
+            <div class="content">
+                <h2>Elegant Design</h2>
+                <p>A dark card with contrasting colours
+                and a stylish appearance.</p>
+                <a href="#dark" class="btn">Discover</a>
+            </div>
+        </article>
+
+    </main>
+
+    <footer>
+        <p>Card Variants Project | HTML & CSS</p>
+    </footer>
+
+</body>
+</html>
+
