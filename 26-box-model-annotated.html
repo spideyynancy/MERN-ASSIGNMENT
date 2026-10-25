@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="CSS Box Model demonstration with annotations">
+
+    <title>CSS Box Model - Practical Guide</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 25px;
+            line-height: 1.6;
+            background-color: #f3f0ff;
+            color: #292943;
+        }
+
+        header {
+            text-align: center;
+            background-color: #6c5ce7;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            margin-top: 0;
+        }
+
+        h2 {
+            color: #4834d4;
+        }
+
+        .section {
+            background-color: white;
+            padding: 22px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        /* BOX MODEL DEMONSTRATION */
+        .box-example {
+            background-color: #dfe6e9;
+            padding: 25px;
+            border: 5px solid #6c5ce7;
+            margin: 20px auto;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .content {
+            background-color: #00b894;
+            color: white;
+            padding: 20px;
+            font-weight: bold;
+        }
+
+        .label {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .content-label {
+            color: #008b70;
+        }
+
+        .padding-label {
+            color: #4834d4;
+        }
+
+        .border-label {
+            color: #d63031;
+        }
+
+        .margin-label {
+            color: #636e72;
+        }
+
+        /* CODE EXAMPLE */
+        pre {
+            background-color: #292943;
+            color: #f1f2f6;
+            padding: 18px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+        }
+
+        /* PROPERTY TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th,
+        td {
+            border: 1px solid #dfe6e9;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #6c5ce7;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f4f3fb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            color: #636e72;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px;
+            }
+
+            .section {
+                padding: 15px;
+            }
+
+            pre {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Understanding the CSS Box Model</h1>
+        <p>Learn how spacing and dimensions work in CSS.</p>
+    </header>
+
+    <section class="section">
+        <h2>1. What is the CSS Box Model?</h2>
+
+        <p>
+            The CSS Box Model explains how every HTML element is
+            represented as a rectangular box on a webpage.
+            It consists of content, padding, border and margin.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>2. Box Model Demonstration</h2>
+
+        <p>
+            The following example shows the different layers
+            of the CSS Box Model.
+        </p>
+
+        <div class="box-example">
+
+            <div class="label margin-label">
+                Margin: Space outside the border
+            </div>
+
+            <div class="label border-label">
+                Border: Edge surrounding the padding
+            </div>
+
+            <div class="label padding-label">
+                Padding: Space inside the border
+            </div>
+
+            <div class="content">
+                CONTENT
+                <br>
+                Actual text or element content
+            </div>
+
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. CSS Code Example</h2>
+
+        <pre><code>.example {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid purple;
+    margin: 25px;
+    background-color: lightgreen;
+}</code></pre>
+
+        <p>
+            The CSS properties above control the content width,
+            inner spacing, border thickness and outer spacing.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>4. Box Model Properties</h2>
+
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Purpose</th>
+            </tr>
+
+            <tr>
+                <td>Content</td>
+                <td>Contains text, images or other elements.</td>
+            </tr>
+
+            <tr>
+                <td>Padding</td>
+                <td>Creates space between content and border.</td>
+            </tr>
+
+            <tr>
+                <td>Border</td>
+                <td>Surrounds the padding and content.</td>
+            </tr>
+
+            <tr>
+                <td>Margin</td>
+                <td>Creates space outside the border.</td>
+            </tr>
+
+            <tr>
+                <td>Box-sizing</td>
+                <td>Controls how an element's width and height are calculated.</td>
+            </tr>
+        </table>
+    </section>
+
+    <section class="section">
+        <h2>5. Why is the Box Model Important?</h2>
+
+        <p>
+            The Box Model helps developers control element size,
+            spacing and alignment. Understanding it makes
+            website layouts easier to create and maintain.
+        </p>
+    </section>
+
+    <footer>
+        <p>CSS Box Model Practical | HTML &amp; CSS</p>
+    </footer>
+
+</body>
+
+</html>
