@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="A responsive styled multi-page website project">
+
+    <title>Creative Space | Multi-Page Project</title>
+
+    <style>
+        :root {
+            --primary: #6c5ce7;
+            --accent: #00b894;
+            --background: #f4f3fb;
+            --surface: #ffffff;
+            --text: #292943;
+            --muted: #74748a;
+            --border: #e4e1f0;
+            --radius: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--surface);
+            padding: 18px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin: 35px auto;
+            width: 86%;
+            padding: 65px 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+            color: white;
+            border-radius: var(--radius);
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin: 0 0 15px;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .button:hover {
+            opacity: 0.85;
+        }
+
+        /* General Sections */
+        .section {
+            width: 86%;
+            margin: 35px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title h2 {
+            color: var(--primary);
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+        }
+
+        /* Cards */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: var(--surface);
+            padding: 25px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(50, 40, 100, 0.10);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        .card p {
+            color: var(--muted);
+        }
+
+        /* About Section */
+        .about-box {
+            background: var(--surface);
+            padding: 30px;
+            border-radius: var(--radius);
+            border-left: 5px solid var(--accent);
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background: var(--surface);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 50px;
+            background: #292943;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 750px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .card-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .card-container {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            .section,
+            .hero {
+                width: 92%;
+            }
+
+            .nav-links {
+                justify-content: center;
+                gap: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Creative Space</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <header class="hero" id="home">
+        <h1>Welcome to Creative Space</h1>
+
+        <p>
+            Explore new ideas, learn useful skills and discover
+            creative solutions through our simple and modern website.
+        </p>
+
+        <a href="#services" class="button">Explore More</a>
+    </header>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Discover what we offer</p>
+        </div>
+
+        <div class="card-container">
+
+            <article class="card">
+                <h3>Web Design</h3>
+                <p>
+                    We create clean and attractive website layouts
+                    using HTML and CSS.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Creative Ideas</h3>
+                <p>
+                    We explore innovative ideas to make digital
+                    experiences more interesting.
+                </p>
+            </article>
+
+            <article class="card">
+                <h3>Learning</h3>
+                <p>
+                    We believe in continuous learning and improving
+                    technical knowledge.
+                </p>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+
+        <div class="section-title">
+            <h2>About Us</h2>
+            <p>Learn more about our project</p>
+        </div>
+
+        <div class="about-box">
+            <h3>Who We Are</h3>
+
+            <p>
+                Creative Space is a simple educational website
+                developed using HTML and CSS. Its purpose is to
+                demonstrate page structure, navigation, reusable
+                styles and responsive web design.
+            </p>
+
+            <p>
+                CSS variables help us maintain consistent colours,
+                while flexible layouts make the website suitable
+                for different screen sizes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+
+        <div class="section-title">
+            <h2>Contact Us</h2>
+            <p>We would love to hear from you</p>
+        </div>
+
+        <div class="contact-box">
+            <h3>Have a Question?</h3>
+
+            <p>
+                Thank you for visiting our website.
+                Keep learning and keep creating!
+            </p>
+
+            <a href="mailto:nancyypandey809@gmail.com" class="button">
+                Send an Email
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Creative Space</p>
+        <p>Designed using HTML and CSS</p>
+    </footer>
+
+</body>
+</html>
+
