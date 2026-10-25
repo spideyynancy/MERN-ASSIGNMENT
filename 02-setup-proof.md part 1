@@ -1,0 +1,23 @@
+vs code version :
+
+Version: 1.143.0 (user setup)
+Commit: 2d0b7506a36c1d6db9a466440131a8e01eab2289
+Date: 2026-10-20T14:31:47-07:00
+Electron: 43.7.7
+ElectronBuildId: 15743441
+Chromium: 150.0.7871.250
+Node.js: 24.21.0
+V8: 15.0.245.31-electron.0
+@github/copilot: 1.0.100-1
+@github/copilot-sdk: 1.0.23-preview.5
+OS: Windows_NT x64 10.0.19045
+3.Live Server : Live Server is a Visual Studio Code extension that launches a local development server for HTML projects. It opens the webpage in a browser and automatically reloads it when supported files are saved.
+ 2.node.js :Node.js is a JavaScript runtime environment that allows JavaScript code to run outside a web browser. It is commonly used to develop server-side applications and backend services.
+3.vs code: it stands for visual studio code it is a free code editor where all programmer or developers can code and run their code easily it provides many key tools which helps in coding.
+
+steps for steup :
+VS Code – open it, then Help → About (note the version).
+Node.js – open the VS Code terminal (Ctrl+`) and run:
+node -v
+npm -v
+Live Server – Extensions panel (Ctrl+Shift+X) → search Live Server by Ritwick Dey → Install. Open any .html file → right-click → Open with Live Server (or click Go Live in the status bar).
